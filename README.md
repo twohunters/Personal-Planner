@@ -20,9 +20,9 @@ For further instructions, visit https://help.github.com.
 
 ## Usage
 
-Plan your day! more text here
+Plan your day! Save your schedule by typing text into the form and clicking the blue save button.
 
-![Deployed](.assets/images/deployed.PNG)
+![Deployed](assets/images/deployed.png)
 
 
 ## Credits
@@ -32,6 +32,8 @@ https://github.com/twohunters
 https://jqueryui.com/
 
 https://momentjs.com/
+
+https://fontawesome.com/
 
 
 ## License
