@@ -1,4 +1,4 @@
-$("#currentDay").text(moment().format("dddd, MMMM Do, h:mm:ss a"));
+$("#currentDay").text(moment().format("dddd, MMM Do YYYY, h:mm:ss a"));
 
 $("#8am .description").val(localStorage.getItem("8am"));
 $("#9am .description").val(localStorage.getItem("9am"));
@@ -23,23 +23,23 @@ saveBtn.on("click", function() {
     localStorage.setItem(time, schedule);
 });
 
-function theTimeis() {
-    var currentTime = moment().hour();
-    
-    $(".time-block").each(function() {
-        var timeBlock = parseInt($(this).attr("id")[i]);
+var hour = moment().hour();
 
+function colorCode() {
+    $(".time-block").each(function() {
+        var currentTime = $(this).attr("id");
+        var timeBlock = parseInt(currentTime);
         if (timeBlock < currentTime) {
             $(this).addClass("past");
-        } else if (timeBlock == currentTime) {
+        } else if (timeBlock === currentTime) {
             $(this).removeClass("past");
             $(this).addClass("present");
         } else {
             $(this).removeClass("past");
             $(this).removeClass("present");
             $(this).addClass("future");
-        }
+        };
     });
-}
+};
 
-theTimeis();
+colorCode();
